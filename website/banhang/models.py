@@ -10,6 +10,9 @@ class Sanpham(models.Model):
     ngaycapnhat = models.DateTimeField("Ngày cập nhật", auto_now=True)
     nguoicapnhat = models.CharField("Người cập nhật", max_length=200)
 
+    class Meta:
+        verbose_name_plural = "Sản phẩm"
+
     def __str__(self):
         return self.tensanpham
 
@@ -21,6 +24,9 @@ class Baiviet(models.Model):
             default="None")
     ngayvietbai = models.DateTimeField("Ngày viết bài", auto_now_add=True)
     ngaycapnhat = models.DateTimeField("Ngày cập nhật", auto_now=True)
+
+    class Meta:
+        verbose_name_plural = "Bài viết"
 
     def __str__(self):
         return self.tieude
